@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0075)file:///C:/Users/jtiz003/Desktop/document%20analyser/document_analyzer.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document Analyzer</title>
+  <script src="./document_analyzer_files/saved_resource"></script>
+  <style>
+    /* Editor overlay styles: keep fonts/spacing identical so highlights line up */
+    .editor-shell { position: relative; min-height: 70vh; }
+    .editor-textarea,
+    .editor-highlight { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 0.95rem; line-height: 1.5; tab-size: 2; }
+    .editor-highlight { white-space: pre-wrap; word-break: break-word; }
+    .editor-layer { position: absolute; inset: 0; padding: 1rem; border-radius: 1rem; overflow: auto; }
+    .editor-textarea { position: absolute; inset: 0; padding: 1rem; border-radius: 1rem; resize: none; background: transparent; color: transparent; caret-color: black; outline: none; }
+    .editor-textarea::selection { background: rgba(59,130,246,0.25); }
+    /* Make sure iOS doesn't auto-adjust colors which can break contrast */
+    @media (prefers-color-scheme: dark) { html { color-scheme: light; } }
+    /* Prevent zooming font-size adjustments */
+    input, select, textarea { font-size: 16px; }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border-width:0}.pointer-events-none{pointer-events:none}.absolute{position:absolute}.sticky{position:sticky}.left-4{left:1rem}.top-0{top:0px}.top-3{top:0.75rem}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-3{margin-bottom:0.75rem}.mt-3{margin-top:0.75rem}.inline-block{display:inline-block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-2\.5{height:0.625rem}.h-5{height:1.25rem}.h-9{height:2.25rem}.min-h-screen{min-height:100vh}.w-2\.5{width:0.625rem}.w-5{width:1.25rem}.w-9{width:2.25rem}.w-full{width:100%}.max-w-6xl{max-width:72rem}.cursor-pointer{cursor:pointer}.select-none{-webkit-user-select:none;user-select:none}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-wrap{flex-wrap:wrap}.place-items-center{place-items:center}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-dashed{border-style:dashed}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.bg-indigo-50{--tw-bg-opacity:1;background-color:rgb(238 242 255 / var(--tw-bg-opacity, 1))}.bg-indigo-500{--tw-bg-opacity:1;background-color:rgb(99 102 241 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/60{background-color:rgb(255 255 255 / 0.6)}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-slate-50{--tw-gradient-from:#f8fafc var(--tw-gradient-from-position);--tw-gradient-to:rgb(248 250 252 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-slate-100{--tw-gradient-to:#f1f5f9 var(--tw-gradient-to-position)}.p-5{padding:1.25rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-10{padding-bottom:2.5rem}.text-center{text-align:center}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-semibold{font-weight:600}.tracking-tight{letter-spacing:-0.025em}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-indigo-700{--tw-text-opacity:1;color:rgb(67 56 202 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-500{--tw-text-opacity:1;color:rgb(100 116 139 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-slate-200{--tw-ring-opacity:1;--tw-ring-color:rgb(226 232 240 / var(--tw-ring-opacity, 1))}.backdrop-blur{--tw-backdrop-blur:blur(8px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-slate-50:hover{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-slate-400:focus{--tw-border-opacity:1;border-color:rgb(148 163 184 / var(--tw-border-opacity, 1))}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-slate-900\/10:focus{--tw-ring-color:rgb(15 23 42 / 0.1)}@media (min-width: 640px){.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}}</style></head>
+<body class="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 text-slate-800">
+  <header class="border-b border-slate-200 bg-white/60 backdrop-blur sticky top-0 z-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between relative">
+      <div class="flex items-center gap-3">
+        <img src="images/analyzer%20image.png" alt="Analyzer" class="h-9 w-9 rounded-xl object-cover shadow" />
+        <h1 class="text-xl sm:text-2xl font-semibold tracking-tight">Document Analyzer</h1>
+      </div>
+      <nav class="flex items-center gap-3">
+        <!-- Drop down moved into hamburger menu -->
+        <!-- Button 1 / Button 2 -->
+        <button id="runBtn" class="rounded-xl px-4 py-2 bg-slate-900 text-white shadow hover:shadow-md transition">Run Analysis</button>
+        <button id="clearBtn" class="rounded-xl px-4 py-2 border border-slate-300 bg-white hover:bg-slate-50 transition">Check Input</button>
+        <!-- Hamburger menu toggle -->
+        <button id="menuBtn" aria-expanded="false" aria-controls="utilityMenu" class="rounded-xl px-3 py-2 border border-slate-300 bg-white hover:bg-slate-50 transition" title="More options">
+          <span class="sr-only">Open menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-slate-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Dropdown menu (collapsed by default) -->
+      <div id="utilityMenu" class="hidden absolute bg-white border border-slate-200 rounded-xl shadow p-5" style="right:1rem; top:3.5rem; width: 18rem;">
+        <div class="flex flex-col gap-4">
+          <!-- Mode selector -->
+          <div class="flex items-center justify-between gap-3">
+            <label for="modeSelect" class="text-slate-600 text-sm">Mode</label>
+            <select id="modeSelect" class="w-40 rounded-xl border-slate-300 text-slate-700 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400">
+              <option>HTML</option>
+              <option>XML</option>
+              <option>Plain Text</option>
+            </select>
+          </div>
+          <!-- Grade scale selector -->
+          <div class="flex items-center justify-between gap-3">
+            <label for="gradeScale" class="text-slate-600 text-sm">Grade scale</label>
+            <input id="gradeScale" type="number" min="0" max="9" step="1" value="3" class="w-16 rounded-xl border border-slate-300 bg-white px-3 py-2 focus:ring-2 focus:ring-slate-900/10 focus:border-slate-400" />
+          </div>
+          <!-- Folder picker -->
+          <div class="flex flex-col gap-2">
+            <label class="inline-flex items-center gap-2 rounded-xl border border-dashed border-slate-300 px-3 py-2 bg-white hover:bg-slate-50 cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 text-slate-500"><path d="M2.25 6.75A2.25 2.25 0 014.5 4.5h3.879a2.25 2.25 0 011.59.659l.621.621c.421.42.992.657 1.59.657H19.5a2.25 2.25 0 012.25 2.25V18a1.5 1.5 0 01-1.5 1.5H3.75A1.5 1.5 0 012.25 18V6.75z"></path></svg>
+              <span class="text-slate-600">Choose folder</span>
+              <input id="folderInput" type="file" webkitdirectory directory multiple class="hidden" />
+            </label>
+            <p id="folderHint" class="text-xs text-slate-500">You can pick a folder above to populate assets in a future step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full px-4 sm:px-6 py-8">
+    <div class="grid grid-cols-1 gap-6">
+      <!-- Left: Input/Editor card -->
+      <section class="bg-white rounded-2xl shadow-xl border border-slate-200 p-5">
+        <header class="flex items-start justify-between gap-4 mb-3">
+          <div>
+            <h2 class="text-lg font-semibold">Marking Criteria Input</h2>
+          </div>
+     
+        </header>
+
+        <div class="editor-shell">
+          <!-- Visible highlight layer -->
+          <pre id="highlightLayer" class="editor-layer editor-highlight bg-slate-50 ring-1 ring-slate-200"><span class="text-indigo-700 font-semibold">&lt;criteria_1&gt;</span>
+<span class="text-indigo-700 font-semibold">&lt;points&gt;</span>3<span class="text-indigo-700 font-semibold">&lt;/points&gt;</span>
+Enter criteria 1 text here
+<span class="text-indigo-700 font-semibold">&lt;/criteria_1&gt;</span>
+
+<span class="text-indigo-700 font-semibold">&lt;criteria_2&gt;</span>
+<span class="text-indigo-700 font-semibold">&lt;points&gt;</span>3<span class="text-indigo-700 font-semibold">&lt;/points&gt;</span>
+Enter criteria 2 text here
+<span class="text-indigo-700 font-semibold">&lt;/criteria_2&gt;</span>  </pre>
+          <!-- Invisible textarea on top -->
+          <textarea id="editor" aria-label="HTML input editor" class="editor-layer editor-textarea" spellcheck="false"></textarea>
+          <!-- Placeholder -->
+          <div id="placeholder" class="pointer-events-none absolute left-4 top-3 text-slate-400 select-none hidden">&lt;!-- Try typing: &lt;div class="card"&gt;Hello&lt;/div&gt; --&gt;</div>
+        </div>
+
+        <div class="mt-3 flex flex-wrap items-center gap-3 text-xs">
+          <span class="inline-flex items-center gap-2 rounded-full bg-indigo-50 text-indigo-700 px-3 py-1">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+            HTML tags
+          </span>
+          <span class="inline-flex items-center gap-2 rounded-full bg-emerald-50 text-emerald-700 px-3 py-1">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            Comments
+          </span>
+          <span class="text-slate-400">Everything else stays plain.</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-4 sm:px-6 pb-10 text-center text-xs text-slate-400">
+    <p>Built with Tailwind. UI based on your mockup.</p>
+  </footer>
+
+  <script>
+    const textarea = document.getElementById('editor');
+    const highlightLayer = document.getElementById('highlightLayer');
+    const placeholder = document.getElementById('placeholder');
+
+    function escapeHTML(str) {
+      return str
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;');
+    }
+
+    function highlightHTMLTags(str) {
+      const escaped = escapeHTML(str);
+      // HTML comments
+      const commentRegex = /&lt;!--[\s\S]*?--&gt;/g;
+      // Basic HTML tag pattern (tagnames + optional attributes/values)
+      const tagRegex = /&lt;\/?\s*[a-zA-Z][\w:-]*(?:\s+[\w:-]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'"=<>`]+))?)*\s*\/?&gt;/g;
+
+      // First highlight comments, then tags (so nested matches don't override)
+      let out = escaped.replace(commentRegex, m => `<span class="text-emerald-700 font-normal italic">${m}</span>`);
+      out = out.replace(tagRegex, m => `<span class="text-indigo-700 font-semibold">${m}</span>`);
+
+      // Ensure final newline renders height at the end like a real editor
+      if (out[out.length - 1] === '\n') out += ' ';
+      return out;
+    }
+
+    function render() {
+      const value = textarea.value;
+      highlightLayer.innerHTML = highlightHTMLTags(value);
+      placeholder.classList.toggle('hidden', !!value.length || document.activeElement === textarea);
+    }
+
+    // Keep scroll positions synced
+    function syncScroll() {
+      highlightLayer.scrollTop = textarea.scrollTop;
+      highlightLayer.scrollLeft = textarea.scrollLeft;
+    }
+
+    // Wire up events
+    textarea.addEventListener('input', render);
+    textarea.addEventListener('scroll', syncScroll);
+    textarea.addEventListener('focus', () => placeholder.classList.add('hidden'));
+    textarea.addEventListener('blur', () => placeholder.classList.toggle('hidden', !!textarea.value.length));
+
+    // Buttons
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      textarea.value = '';
+      textarea.focus();
+      render();
+    });
+    document.getElementById('runBtn').addEventListener('click', () => {
+      // Placeholder action hook
+      const btn = document.getElementById('runBtn');
+      btn.disabled = true;
+      const original = btn.textContent;
+      btn.textContent = 'Running…';
+      setTimeout(() => { btn.textContent = original; btn.disabled = false; }, 600);
+    });
+
+    // Folder picker hint
+    document.getElementById('folderInput').addEventListener('change', (e) => {
+      const count = e.target.files?.length || 0;
+      const hint = document.getElementById('folderHint');
+      hint.textContent = count ? `Selected ${count} file${count === 1 ? '' : 's'} from folder.` : 'You can pick a folder above to populate assets in a future step.';
+    });
+
+    // Seed with a friendly example
+    textarea.value = '<criteria_1>\nEnter criteria 1 text here\n</criteria_1>\n\n<criteria_2>\nEnter criteria 2 text here\n</criteria_2>\n\n<!--\n- Use <criteria_n></criteria_n> to add additional marking criteria.\n- HTML comments in the marking criteria are ignored.\n- Use <good_example></good_example> or <poor_example></poor_example> within criteria.\n- Analysis output: downloads .CSV file. \n-->  ';
+    render();
+
+    // Hamburger menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const utilityMenu = document.getElementById('utilityMenu');
+    if (menuBtn && utilityMenu) {
+      menuBtn.addEventListener('click', () => {
+        const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+        menuBtn.setAttribute('aria-expanded', String(!expanded));
+        utilityMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+
+
+</body></html>
